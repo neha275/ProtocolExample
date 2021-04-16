@@ -15,10 +15,20 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "" {
+            let colorViewController =  segue.destination as! ColorsViewController
+            colorViewController.colorDelegate = self
+        }
     }
 
 
+}
+
+extension ViewController : BackgroundColor {
+    func setBackgroundColor(selectedColorIndex: Int) {
+        
+    }
+    
+    
 }
 

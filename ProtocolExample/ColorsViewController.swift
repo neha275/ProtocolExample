@@ -9,21 +9,24 @@ import UIKit
 
 class ColorsViewController: UIViewController {
 
+    
+    var colorDelegate:BackgroundColor?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onChooseColor(sender: AnyObject){
+        dissmissView(selectedColor: sender.tag)
     }
-    */
+    
+    func dissmissView(selectedColor: Int) {
+        self.dismiss(animated: true, completion: {()-> Void in
+            self.colorDelegate?.setBackgroundColor(selectedColorIndex: selectedColor)
+                        
+                     
+        })
+    }
 
 }
