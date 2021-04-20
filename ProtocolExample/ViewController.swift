@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "" {
+        if segue.identifier == "backgroundColor" {
             let colorViewController =  segue.destination as! ColorsViewController
             colorViewController.colorDelegate = self
         }
