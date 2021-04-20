@@ -27,6 +27,16 @@ class ViewController: UIViewController {
 extension ViewController : BackgroundColor {
     func setBackgroundColor(selectedColorIndex: Int) {
         
+        switch selectedColorIndex {
+        case 0:
+            self.view.backgroundColor = UIColor(named: "option1")
+            break
+        case 1:
+            self.view.backgroundColor = UIColor(named: "option2")
+            break
+        default:
+            self.view.backgroundColor = UIColor(named: "option3")
+        }
     }
     
     

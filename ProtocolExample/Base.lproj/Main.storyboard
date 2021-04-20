@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,16 +47,70 @@
                     <view key="view" contentMode="scaleToFill" id="alc-VB-nAB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asX-ER-B7w">
+                                <rect key="frame" x="153" y="139" width="108.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WGY-wB-Xhs">
+                                <rect key="frame" x="20" y="190" width="374" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kS5-4g-lJe">
+                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="50"/>
+                                        <color key="backgroundColor" name="option1"/>
+                                        <connections>
+                                            <action selector="onChooseColorWithSender:" destination="aTd-03-HFz" eventType="touchUpInside" id="wps-vq-dRg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIM-SZ-fqO">
+                                        <rect key="frame" x="126.5" y="0.0" width="121" height="50"/>
+                                        <color key="backgroundColor" name="option2"/>
+                                        <connections>
+                                            <action selector="onChooseColorWithSender:" destination="aTd-03-HFz" eventType="touchUpInside" id="HDU-wO-Qd6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUn-yq-WIm">
+                                        <rect key="frame" x="252.5" y="0.0" width="121.5" height="50"/>
+                                        <color key="backgroundColor" name="option3"/>
+                                        <connections>
+                                            <action selector="onChooseColorWithSender:" destination="aTd-03-HFz" eventType="touchUpInside" id="916-ET-T8W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rot-PW-1Ka"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wyA-fX-aqq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="asX-ER-B7w" firstAttribute="centerX" secondItem="alc-VB-nAB" secondAttribute="centerX" id="0Dy-yz-iVt"/>
+                            <constraint firstItem="WGY-wB-Xhs" firstAttribute="centerX" secondItem="alc-VB-nAB" secondAttribute="centerX" id="Agd-nh-m7O"/>
+                            <constraint firstItem="WGY-wB-Xhs" firstAttribute="leading" secondItem="wyA-fX-aqq" secondAttribute="leading" constant="20" id="EJI-ml-JDD"/>
+                            <constraint firstItem="asX-ER-B7w" firstAttribute="top" secondItem="wyA-fX-aqq" secondAttribute="top" constant="139" id="vbQ-5N-YYG"/>
+                            <constraint firstItem="wyA-fX-aqq" firstAttribute="trailing" secondItem="WGY-wB-Xhs" secondAttribute="trailing" constant="20" id="vfx-Ks-gV2"/>
+                            <constraint firstItem="WGY-wB-Xhs" firstAttribute="top" secondItem="asX-ER-B7w" secondAttribute="bottom" constant="28" id="z0B-lT-I0P"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TvS-lJ-nzz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="256"/>
+            <point key="canvasLocation" x="653.62318840579712" y="255.80357142857142"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="option1">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="option2">
+            <color red="1" green="0.58399999141693115" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="option3">
+            <color red="0.20399999618530273" green="0.77999997138977051" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
